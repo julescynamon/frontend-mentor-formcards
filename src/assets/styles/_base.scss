@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--very-dark-violet);
+    background-color: var(--white);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+    font-size: var(--font-size);
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark-grayish-blue);
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0px;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+input {
+    font-family: var(--font-family);
+}
+
+::placeholder {
+    font-family: var(--font-family);
+}
