@@ -1,0 +1,18 @@
+.app {
+    display: flex;
+    flex-direction: row;
+}
+
+.card {
+    flex: 1;
+    width: 400px;
+    height: 100vh;
+    background-image: url(./assets/images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}

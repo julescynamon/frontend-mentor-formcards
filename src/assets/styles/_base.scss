@@ -5,6 +5,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     color: var(--very-dark-violet);
     background-color: var(--white);
+    font-size: var(--font-size);
 }
 
 h1,
@@ -16,7 +17,6 @@ h4 {
 
 * {
     box-sizing: border-box;
-    font-size: var(--font-size);
 }
 
 a {
