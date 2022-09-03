@@ -41,6 +41,15 @@ img {
 
 input {
     font-family: var(--font-family);
+    border: 1px solid var(--light-grayish-violet);
+    border-radius: 5px;
+    padding: 10px;
+
+    &:focus {
+        outline: none;
+        border-image: var(--linear-gradient);
+        border-image-slice: 1;
+    }
 }
 
 ::placeholder {

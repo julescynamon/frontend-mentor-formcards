@@ -1,6 +1,5 @@
-.app {
+.App {
     display: flex;
-    flex-direction: row;
 }
 
 .card {
@@ -13,6 +12,7 @@
 }
 
 .form {
+    flex: 2;
     display: flex;
     flex-direction: column;
 }
