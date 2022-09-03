@@ -5,7 +5,45 @@
     margin-bottom: 20px;
 }
 
+
+
 .form-info {
     display: flex;
+    align-items: baseline;
     margin-bottom: 20px;
+}
+
+
+.input-date {
+    display: flex;
+
+    &>input {
+        width: 84px;
+        margin-right: 10px;
+    }
+}
+
+.cvc {
+    display: flex;
+    flex-direction: column;
+
+
+    &>input {
+        width: 145px;
+    }
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    background-color: var(--very-dark-violet);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 900;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }

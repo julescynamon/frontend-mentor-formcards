@@ -15,8 +15,10 @@ export default function CardFrom() {
             <div className="form-info">
                 <div className="date">
                     <label>Exp. Date (MM/YY)</label>
-                    <input type="number" />
-                    <input type="number" />
+                    <div className="input-date">
+                        <input type="number" />
+                        <input type="number" />
+                    </div>
                 </div>
                 <div className="cvc">
                     <label>CVC</label>
