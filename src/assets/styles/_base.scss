@@ -53,11 +53,11 @@ input {
 
 
 
-    &:focus {
-        outline: none;
-        border-image: var(--linear-gradient);
-        border-image-slice: 1;
-    }
+    // &:focus {
+    //     outline: none;
+    //     border-image: var(--linear-gradient);
+    //     border-image-slice: 1;
+    // }
 }
 
 input[type=number]::-webkit-inner-spin-button {

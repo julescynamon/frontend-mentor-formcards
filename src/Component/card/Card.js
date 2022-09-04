@@ -1,7 +1,8 @@
 import React from 'react';
 import "./card.scss";
 
-export default function Card() {
+export default function Card({values}) {
+
     return (
         <div className="card-container">
             <div className="card-front">
@@ -9,14 +10,14 @@ export default function Card() {
                     <div className="circle"></div>
                     <div className="circle-empty"></div>
                 </div>
-                <p className="number-card">0000 0000 0000 0000</p>
+                <p className="number-card">{ values.number }</p>
                 <div className="card-info">
-                    <span className="name-card">JANE APPLESEED</span>
-                    <span className="date-card">00/00</span>
+                    <span className="name-card">{ values.name }</span>
+                    <span className="date-card">{ values.month }/{ values.year }</span>
                 </div>
             </div>
             <div className="card-back">
-                <span>000</span>
+                <span>{ values.cvc }</span>
             </div>
         </div>
     )
