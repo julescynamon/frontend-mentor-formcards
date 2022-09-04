@@ -1,16 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
+import IconComplete from "../../../assets/images/icon-complete.svg";
 import "./cardForm.scss";
 
 export default function CardFrom({ setValues }) {
 
+    const { isSubmit, setIsSubmit } = useState(false);
 
     const yupSchema = yup.object({
         name: yup
                 .string()
-                .required("can't be blank"),
+                .required("can't be blank")
+                .min(3, "must be at least 3 characters"),
         number: yup
                 .number()
                 .typeError("Wrong format, numbers only")
@@ -33,16 +36,18 @@ export default function CardFrom({ setValues }) {
                 .min(3, "Too short")
     })
 
+    
     const { 
         register, 
         handleSubmit, 
-        formState: { errors },
+        formState: { errors, isSubmitSuccessful },
     } = useForm({
         resolver: yupResolver(yupSchema),
         mode: "onSubmit", 
     });
-
-    const onSubmit = (values) => {
+    
+    
+    const submit = (values) => {
         values.name = values.name.toLowerCase()
         .split(' ')
         .map(function(word) {
@@ -53,9 +58,22 @@ export default function CardFrom({ setValues }) {
         setValues(values);
     }
 
+    const refreshPage = () => {
+        window.location.reload(false);
+    }
+
 
     return (
-        <form onSubmit={ handleSubmit(onSubmit) } >
+        <>
+        { isSubmitSuccessful ? (
+            <div id='complete-cont'>
+                <img id='complete' src={IconComplete} alt="succes"/>
+                <h1 className='grats' >Thank You!</h1>
+                <p className='p'>We've added your card details.</p>
+                <button id='cont-btn' onClick={refreshPage} >Continue</button>
+            </div>
+        ) : (
+            <form onSubmit={ handleSubmit(submit) } >
             <div className="form-name">
                 <label>Cardholder Name</label>
                 <input 
@@ -119,5 +137,7 @@ export default function CardFrom({ setValues }) {
             </button>
             </div>
         </form>
+        )}
+    </>
     )
 }

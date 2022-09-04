@@ -62,3 +62,50 @@
 .error {
     border: 1px solid var(--red);
 }
+
+#complete-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+#complete {
+    border-radius: 50%;
+    height: 70px;
+}
+
+.grats {
+    margin-top: 30px;
+    letter-spacing: 2px;
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--very-dark-violet);
+}
+
+.p {
+    color: var(--dark-grayish-violet);
+    font-weight: 500;
+    font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 3rem;
+}
+
+#cont-btn {
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    background-color: var(--very-dark-violet);
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    transition: .3s ease;
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(71, 28, 110);
+    }
+}
