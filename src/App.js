@@ -1,14 +1,18 @@
 import './app.scss';
-import { useState, useContext } from 'react';
-import valuesContext from './context/valuesContext';
+import { useState } from 'react';
 import Footer from './Component/footer/Footer';
 import Card from './Component/card/Card';
 import Form from './Component/form/Form';
 
 function App() {
 
-	const context = useContext(valuesContext);
-	const [values, setValues] = useState(context); 
+	const [values, setValues] = useState({
+		name: "Jane Appleseed",
+        number: "0000 0000 0000 0000",
+        month: "00",
+        year: "00",
+        cvc: "000"
+	}); 
 
 	return (
 		<>

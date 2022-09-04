@@ -43,6 +43,13 @@ export default function CardFrom({ setValues }) {
     });
 
     const onSubmit = (values) => {
+        values.name = values.name.toLowerCase()
+        .split(' ')
+        .map(function(word) {
+            return word[0].toUpperCase() + word.substr(1);
+        })
+        .join(' ');
+        values.number = values.number.toString().replace(/(.{4})(?=.)/g,"$1 ")
         setValues(values);
     }
 
