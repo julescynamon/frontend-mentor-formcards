@@ -17,11 +17,16 @@
 .input-date {
     display: flex;
 
-    &>input {
+    &__date {
         width: 84px;
         margin-right: 10px;
+
+        &>input {
+            width: 100%;
+        }
     }
 }
+
 
 .cvc {
     display: flex;
@@ -46,4 +51,10 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.form-error {
+    color: var(--red);
+    font-size: 12px;
+    margin-top: 5px;
 }
